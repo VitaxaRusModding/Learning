@@ -2,31 +2,21 @@
 
 public class Player : MonoBehaviour
 {
-    public float rotationSpeed = 2.0f;
-
-    public int health;
+    public float rotationSpeed = 2.0f; 
     public bool moving;
 
     public float speed;
 
     public float jump;
 
-    public Animator animator;
 
-    private CharacterController Controller;
-
-    private Transform m_Transform;
-
-    public Transform camera_parrent;
 
     // Start is called before the first frame update
-    void Start()
+    CharacterController Controller;
+
+    private void Start()
     {
-        animator = GetComponent<Animator>();
-
-        Controller = GetComponent<CharacterController>();
-
-        m_Transform = GetComponent<Transform>();
+        Controller = PlayerManager.instance.Controller;
     }
 
     // Update is called once per frame
