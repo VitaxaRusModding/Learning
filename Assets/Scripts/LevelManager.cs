@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public Player PlayerPrefab;
+    public PlayerManager PlayerPrefab;
 
     public bool IsSpawnStart;
 
@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     {
         if (IsSpawnStart)
         {
-            Player player = GameObject.Instantiate<Player>(PlayerPrefab, Spawn.position, Spawn.rotation);
+            PlayerManager player = GameObject.Instantiate<PlayerManager>(PlayerPrefab, Spawn.position, Spawn.rotation);
 
             MainCamer.SetParent(player.camera_parrent);
 
