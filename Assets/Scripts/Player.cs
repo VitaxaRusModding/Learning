@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
 
 
+    Vector3 movingDir = Vector3.zero;
     // Start is called before the first frame update
     CharacterController Controller;
 
@@ -19,14 +20,13 @@ public class Player : MonoBehaviour
         Controller = PlayerManager.instance.Controller;
     }
 
-    // Update is called once per frame
+    // Update is called once per frame 
     void Update()
     {
         Move(PollKeys());
     }
     public void Move(PlayerInputPacket packet)
     {
-        var movingDir = Vector3.zero;
 
         if (movingDir.x != 0 || movingDir.z != 0)
         {
@@ -53,7 +53,6 @@ public class Player : MonoBehaviour
             }
         }
         // set local rotation 
-        movingDir = movingDir;
         //player.cameraTransform.localRotation = Quaternion.Euler(client.movement.MouseY / 2, 0, 0);
         transform.localRotation = Quaternion.Euler(0, packet.Rotation, 0);
         if (moving)
