@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
     public Transform m_Transform;
 
     public Transform camera_parrent;
-    void Start()
+    void AWauk()
     {
         animator = GetComponent<Animator>();
 
