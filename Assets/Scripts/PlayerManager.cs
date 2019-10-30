@@ -12,7 +12,11 @@ public class PlayerManager : MonoBehaviour
     public Transform m_Transform;
 
     public Transform camera_parrent;
-    void Start()
+
+    public PlayerMotor playerMotor;
+
+    public PlayerHealth playerHealth;
+    void Awaik()
     {
         animator = GetComponent<Animator>();
 

@@ -97,8 +97,4 @@ public class Player : MonoBehaviour
 
     }
 }
-public class PlayerInputPacket
-{
-    public bool[] Keys;
-    public float Rotation;
-}
+

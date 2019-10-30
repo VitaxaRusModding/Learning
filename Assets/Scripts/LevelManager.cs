@@ -20,6 +20,10 @@ public class LevelManager : MonoBehaviour
 
             MainCamer.SetParent(player.camera_parrent);
 
+            MainCamer.localPosition = Vector3.zero;
+
+            MainCamer.localRotation = Quaternion.identity;
+
         }
 
     }
