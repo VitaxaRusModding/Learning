@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
 
             MainCamer.localRotation = Quaternion.identity;
 
+
         }
 
     }
